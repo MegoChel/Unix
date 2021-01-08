@@ -13,6 +13,5 @@ D=${D##%Output:}
 name=$(mktemp -d tempXXX)
 i=' 1.tex'
 pdflatex -output-directory=$name -file-line-error -halt-on-error -jobname=$D <$i
-if [ -e $D.pdf ]; then
 mv $name/$D.pdf ./$D.pdf
-fi
+
